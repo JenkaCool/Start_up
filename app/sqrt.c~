@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "myfunc.h"
 
-int main()
+int sqrt()
 {
     float a, b, c;
     float d, x1, x2;
@@ -31,8 +31,8 @@ int main()
                 printf ("%f", x1);
             } else {
                 d = sqrt(d);
-                x1 = (-b + d) / (2 * a);
-                x2 = (-b - d) / (2 * a);
+                x1 = ((-b) + d) / (2 * a);
+                x2 = ((-b) - d) / (2 * a);
                 printf ("%f %f", x1, x2);
             }
         }

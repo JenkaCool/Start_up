@@ -1,4 +1,3 @@
-
 #include "myfunc.h"
 
 int myfunc(int b) {
