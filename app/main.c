@@ -1,5 +1,6 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "myfunc.h"
 
 int main()
@@ -16,23 +17,23 @@ int main()
     printf("Enter c: ");
     scanf("%f", &c);
 
-    if (a = 0){
+    if (a == 0){
         x1 = (-c) / b;
         printf ("%f", x1);
     } else {
-        d = (b^2) - (4 * a * c);
+        d = (b*b) - (4 * a * c);
 
         if (d < 0)
             printf ("Roots doesn't exist");
         else
-            if (d = 0) {
+            if (d == 0) {
                 x1 = (-b) / (2 * a);
                 printf ("%f", x1);
             } else {
                 d = sqrt(d);
                 x1 = (-b + d) / (2 * a);
-                x2 = (-b - d) / (2 * a)
-                printf ("%f %f", x1, x2)
+                x2 = (-b - d) / (2 * a);
+                printf ("%f %f", x1, x2);
             }
         }
     return 0;
