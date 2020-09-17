@@ -4,9 +4,6 @@
 
 int main()
 {
-    int x;
-
-
-
+    printf("Hello World!\n");
     return myfunc(2);
 }
