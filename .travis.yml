@@ -4,6 +4,12 @@ language:
 before_install:
   - pip install --user cpp-coveralls
 
+addons:
+  sonarcloud:
+    organization: "balyuk-github"
+    token: $SONAR_TOKEN
+      secure: b58d83ae27bc990b3c6992f2cce4cf2a2ade16c2
+
 script:
   - qmake
   - make
@@ -11,6 +17,8 @@ script:
 
 after_success:
   - coveralls --root . -E ".*external.*" -E ".*tests.*"
+  - build-wrapper-linux-x86-64 --out-dir bw-output make clean all
+  - sonar-scanner -Dsonar.cfamily.build-wrapper-output=bw-output
 
 notifications:
   email: false
