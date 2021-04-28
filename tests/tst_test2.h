@@ -14,23 +14,23 @@ TEST(func, no_sol)
 }
 
 TEST(func, one_sol) {
-    vr res = variable(4, 4, 1);
+    vr res = variable(16, -8, 1);
     EXPECT_EQ(1, res.vr_count);
-    EXPECT_DOUBLE_EQ(-0.5, res.x1);
+    EXPECT_DOUBLE_EQ(0.25, res.x1);
 }
 
 TEST(func, two_sols_1) {
+    vr res = variable(2, 5, -7);
+    EXPECT_EQ(2, res.vr_count);
+    EXPECT_DOUBLE_EQ(1.0, res.x1);
+    EXPECT_DOUBLE_EQ(-3.5, res.x2);
+}
+
+TEST(func, two_sols_2) {
     vr res = variable(1, 4, 0);
     EXPECT_EQ(2, res.vr_count);
     EXPECT_DOUBLE_EQ(-4.0, res.x1);
     EXPECT_DOUBLE_EQ(0.0, res.x2);
-}
-
-TEST(func, two_sols_2) {
-    vr res = variable(2, -5, 2);
-    EXPECT_EQ(2, res.vr_count);
-    EXPECT_DOUBLE_EQ(0.5, res.x1);
-    EXPECT_DOUBLE_EQ(2.0, res.x2);
 }
 
 TEST(func, stranger_things_1) {

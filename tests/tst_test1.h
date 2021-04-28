@@ -12,12 +12,12 @@ TEST(test1, suite1)
     /*ASSERT_THAT(0, Eq(0)); */
 }
 
-TEST(test2, suite1)
+TEST(test2, suite2)
 {
     EXPECT_EQ(myfunc(0), 4);
 }
 
-TEST(test1, suite2)
+TEST(test1, suite3)
 {
     EXPECT_EQ(myfunc(-1), 3);
 }
