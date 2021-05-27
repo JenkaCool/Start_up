@@ -22,8 +22,8 @@ TEST(func, one_sol) {
 TEST(func, two_sols_1) {
     vr res = variable(2, 5, -7);
     EXPECT_EQ(2, res.vr_count);
-    EXPECT_DOUBLE_EQ(1.0, res.x1);
-    EXPECT_DOUBLE_EQ(-3.5, res.x2);
+    EXPECT_DOUBLE_EQ(-3.5, res.x1);
+    EXPECT_DOUBLE_EQ(1.0, res.x2);
 }
 
 TEST(func, two_sols_2) {
